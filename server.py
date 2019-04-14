@@ -1,7 +1,7 @@
 import pymongo
 from flask import Flask
 
-key_file = open('/home/shanu/my_projects/car_rental/key.txt')
+key_file = open('key.txt')
 key = str(key_file.read())
 
 client = pymongo.MongoClient(key)
@@ -13,6 +13,7 @@ app = Flask(__name__)
 @app.route("/")
 
 def home():
+
     return "Hello, World!"
 
 @app.route("/salvador")
